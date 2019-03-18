@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/wangEditor.min.js"></script>
+
+<link href="css/index.css" rel="stylesheet"/>
+<script src="js/index.js"></script>
+<title>智存——让你的学习更有规律</title>
+</head>
+<body style="display:none;">
+	<div class="container-fluid navbar navbar-expand-sm bg-dark navbar-dark fixed-top" style="height:80px;">
+		<a href="index.html" class="navbar-brand col-sm-4" style="padding-left:80px;">
+			<img src="pic/head.png" style="width:110px;"/>
+		</a>
+		<button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".collapse">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse col-sm-8 row">
+			<ul class="navbar-nav col-sm-9">
+				<li class="nav-item"><a href="index.html" class="nav-link">首页</a></li>
+				<li class="nav-item"><a class="nav-link">最新课程</a></li>
+				<li class="nav-item"><a href="home/noteRecommend.html" class="nav-link">笔记推荐</a></li>
+				<li class="nav-item"><a href="home/question.html" class="nav-link">提个问题</a></li>
+				<li class="nav-item"><a href="home/answer.html" class="nav-link">回答问题</a></li>
+				<li class="form-inline">
+					<input type="text" class="form-control form-control-sm" placeholder="search something .." style="margin:0px 5px;font-size:13px;"/>
+					<button type="button" class="btn btn-primary btn-sm" style="font-size:13px;">搜索</button>
+				</li>
+			</ul>
+			<ul class="navbar-nav col-sm-3" style="padding-left:100px;">
+				<li class="nav-item"><a href="home/register.html" class="nav-link">注册</a></li>
+				<li class="nav-item"><a href="home/login.html" class="nav-link">登录</a></li>
+				<li id="menu" class="nav-item dropdown" style="display:none;">
+					<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">超级玛丽</a>
+					<div class="dropdown-menu">
+						<a class="dropdown-item">我的主页</a>
+						<a class="dropdown-item">我的消息<span class="badge badge-info">50</span></a>
+						<a class="dropdown-item">我的关注</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item">退出登录</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="container-fluid" id="wall">
+		<div class="container">
+			<div class="row" style="padding-top:150px;">
+				<div class="col-sm-7">
+					<h2 id="head-section-text1">智 存</h2>
+					<div class="text-center" style="padding-top:180px;">
+						<h5 id="head-section-text2"><p>打造自己的学习库</p><p style="text-indent:4em;">让你的学习更有序</p></h5>
+					</div>
+					<a href="home/login.html"><button type="button" class="btn btn-warning btn-lg" style="padding:15px 20px;color:white;font-size:18px;">开始学习之路</button></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="section"> 
+		<div class="container" id="service">
+			<div class="section-head">
+				<h1 class="text-center" style="margin-bottom: 20px;">我们的功能</h1>
+				<div class="colored-line"></div>
+				<div class="text-center">以课程，笔记，提问三个主要模块展开</div>
+			</div>
+			<div class="row" style="padding:0px 30px;position: relative;">
+				<div class="pic-module pic-module-first">
+					<img class="app-pic" src="pic/app1.jpg"/>
+					<h4 class="col-sm-12">最新课程</h4>
+					<div class="app-doc"><p>根据用户喜好需求，推荐相关最新课程，并且允许用户站内搜索特定视频学习</p></div>
+				</div>
+				<div class="pic-module">
+					<img class="app-pic" src="pic/app2.jpg"/>
+					<h4 class="col-sm-12">笔记互动</h4>
+					<div class="app-doc"><p>提供笔记文件管理，并且遵循用户的意愿，用户之间互相分享讨论笔记，共同提高</p></div>
+				</div>
+				<div class="pic-module pic-module-last" style="padding-top:8px;">
+					<img class="app-pic" src="pic/app3.jpg" style="margin-bottom: 14px;"/>
+					<h4 class="col-sm-12">提问回答</h4>
+					<div class="app-doc"><p>三人行必有我师。允许用户相对相关标签提问，擅长这方面用户进行回答，用户之间共同进步</p></div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div id="section" class="container-fluid team">
+		<div style="background: rgba(13, 60, 85, 0.8);width:100%;height:100%;">
+			<div class="container" id="service">
+				<div class="section-head">
+					<h1 class="text-center" style="margin-bottom: 20px;">我们的团队</h1>
+					<div class="colored-line"></div>
+					<div class="text-center">麻雀虽小，五脏俱全</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-3">
+						<div class="rounded-circle team-pic">
+							<img src="pic/company1.jpg" style="width:150px;height:150px;"/>
+							<div class="team-information">
+								<div class="member-details">
+									<h5 class="member-head">陈祯民</h5>
+									<p>前端&负责人</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="rounded-circle team-pic">
+							<img src="pic/company2.bmp" style="width:150px;height:150px;"/>
+							<div class="team-information">
+								<div class="member-details">
+									<h5 class="member-head">严坤</h5>
+									<p>图标设计</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="rounded-circle team-pic">
+							<img src="pic/company3.jpg" style="width:150px;height:150px;"/>
+							<div class="team-information">
+								<div class="member-details">
+									<h5 class="member-head">李春燕</h5>
+									<p>后端&需求分析</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-3">
+						<div class="rounded-circle team-pic">
+							<img src="pic/company4.jpg" style="width:150px;height:150px;"/>
+							<div class="team-information">
+								<div class="member-details">
+									<h5 class="member-head">徐丽洪</h5>
+									<p>后端</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid" id="section"> 
+		<div class="container" id="service">
+			<div class="section-head">
+				<h1 class="text-center" style="margin-bottom: 20px;">优秀笔记</h1>
+				<div class="colored-line"></div>
+				<div class="text-center">最受欢迎的三名笔记作者和他们的代表作</div>
+			</div>
+			<div class="row" style="padding:0px 30px;">
+				<div class="pic-module pic-module-first">
+					<div class="pic-container">
+						<img class="pic-container-inner" src="pic/1.jpg"/>
+					</div>
+					<h4 style="margin-top:40px;">超级玛丽</h4>
+					<table class="pic-table">
+						<tr>
+							<td>签名：</td>
+							<td>路漫漫其修远兮，吾将上下而求索。</td>
+						</tr>
+						<tr>
+							<td>笔记：</td>
+							<td>242</td>
+						</tr>
+						<tr>
+							<td>留言：</td>
+							<td>31</td>
+						</tr>
+						<tr>
+							<td>粉丝：</td>
+							<td>32</td>
+						</tr>
+						<tr>
+							<td>著作：</td>
+							<td>
+								<ul>
+									<li><a href="#">超级玛丽1</a></li>
+									<li><a href="#">超级玛丽2</a></li>
+									<li><a href="#">超级玛丽3</a></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="pic-module">
+					<div class="pic-container">
+						<img class="pic-container-inner" src="pic/1.jpg"/>
+					</div>
+					<h4 style="margin-top:40px;">超级玛丽</h4>
+					<table class="pic-table">
+						<tr>
+							<td>签名：</td>
+							<td>路漫漫其修远兮，吾将上下而求索。</td>
+						</tr>
+						<tr>
+							<td>笔记：</td>
+							<td>242</td>
+						</tr>
+						<tr>
+							<td>留言：</td>
+							<td>31</td>
+						</tr>
+						<tr>
+							<td>粉丝：</td>
+							<td>32</td>
+						</tr>
+						<tr>
+							<td>著作：</td>
+							<td>
+								<ul>
+									<li><a href="#">超级玛丽1</a></li>
+									<li><a href="#">超级玛丽2</a></li>
+									<li><a href="#">超级玛丽3</a></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="pic-module pic-module-last">
+					<div class="pic-container">
+						<img class="pic-container-inner" src="pic/1.jpg"/>
+					</div>
+					<h4 style="margin-top:40px;">超级玛丽</h4>
+					<table class="pic-table">
+						<tr>
+							<td>签名：</td>
+							<td>路漫漫其修远兮，吾将上下而求索。</td>
+						</tr>
+						<tr>
+							<td>笔记：</td>
+							<td>242</td>
+						</tr>
+						<tr>
+							<td>留言：</td>
+							<td>31</td>
+						</tr>
+						<tr>
+							<td>粉丝：</td>
+							<td>32</td>
+						</tr>
+						<tr>
+							<td>著作：</td>
+							<td>
+								<ul>
+									<li><a href="#">超级玛丽1</a></li>
+									<li><a href="#">超级玛丽2</a></li>
+									<li><a href="#">超级玛丽3</a></li>
+								</ul>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="container-fluid" id="section"> 
+		<div class="container" id="service">
+			<div class="section-head">
+				<h1 class="text-center" style="margin-bottom: 20px;">联系我们</h1>
+				<div class="colored-line"></div>
+				<div class="text-center">通过以下方式把您的意见发送给我们</div>
+			</div>
+			<div class="row" style="padding-bottom:60px;">
+				<div class="col-sm-4 text-center" style="padding-top:50px">
+					<i class="fa fa-envelope" style="font-size:35px;color:orange;margin-bottom:20px;"></i>
+					<p style="color:orange;font-weight:500;">1290433700@qq.com</p>
+				</div>
+				<div class="col-sm-4 text-center" style="padding-top:50px">
+					<i class="fa fa-qq" style="font-size:35px;color:orange;margin-bottom:20px;"></i>
+					<p style="color:orange;font-weight:500;">1290433700</p>
+				</div>
+				<div class="col-sm-4 text-center" style="padding-top:50px">
+					<i class="fa fa-whatsapp" style="font-size:35px;color:orange;margin-bottom:20px;"></i>
+					<p style="color:orange;font-weight:500;">0791-123456</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="container-fluid text-center" style="background:#242C2E;padding:5px;padding-top:15px;color:white;">
+		<p>Copyright © 智存 2018-2023</p>
+	</div>
+</body>
+</html>

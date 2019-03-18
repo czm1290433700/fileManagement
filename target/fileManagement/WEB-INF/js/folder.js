@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+$(function(){
+	$("#add").click(function(){
+		$(".add-folder").css("display","block");
+	})
+	$("#cancel").click(function(){
+		$(".add-folder").css("display","none");
+	})
+})

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+.container-fluid{background-color: #F7F7F7;}
+	.container{padding:120px 40px;margin:auto!important;padding-bottom: 80px;}
+		.body-left{background-color: white;min-height: calc(100vh - 260px)!important;float:left;margin-right:30px;padding:40px 30px;}
+			.breadcrumb{font-size: 13px!important;}
+			.body-left-content{padding:30px 40px;}
+				.title{text-align: center;font-weight: 600;margin-bottom: 30px;font-size:25px;}
+				.author{float: right;font-weight:300;}
+				.author a{color:black;text-decoration: none;}
+				.author a:hover{color:#007BFF;text-decoration: none;}
+				.main{text-align: justify;padding:50px 0;}
+				.main p{margin-bottom:0;}
+				.time{font-size: 14px;color:#8E8E90;float:right;}
+				.info{font-size: 14px;color:#8E8E90;float:right;}
+					.comments{margin-right: 40px;float: left;}
+					.browse{float: left;}
+			.comment{padding:0px 40px;}
+				.comment h5{font-size: 28px;color:#FFA700;font-weight:500;}
+				.comment .comment-area{background-color: #FAFAFA;padding:30px 10px;width:100%;margin:10px 0;}
+				.comment .comment-area-none{width:100%;margin:10px 0;display: none;margin-left:20px;}
+				.comment .comment-form{width:100%;margin-bottom:30px;}
+				.comment .comment{width:100%;font-size:14px;padding:10px 0;border-top:1px #C6D1D9 solid;}
+				.comment .comment-text{font-size:13px;}
+				.comment .com-comment{font-size:12px;float:right;color:#8B8E90;margin-right:30px;}
+				.comment .com-time{font-size:12px;float:right;color:#8B8E90;}
+		.body-right{background-color: white;min-height: calc(100vh - 260px)!important;float:left;padding:40px 40px;}
+			.otherQues{list-style-type: none;margin:0;padding:0;}
+			.otherQues li{padding:6px 0;}
+			.otherQues a{color:black;text-decoration: none;}
+			.otherQues a:hover{text-decoration: none;color:#FFA700;}
+			.head{color:#7A8F9A;font-size:20px;font-weight:400;margin-right:60px;border-bottom: 3px #FFA700 solid;padding-bottom:10px;padding-right:20px;}
+			.refresh{line-height:30px;font-size:14px;color:#8B8B8B;float:right;}
+			.refresh:hover{text-decoration: none;line-height:30px;font-size:14px;color:#8B8B8B;float:right;}
