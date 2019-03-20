@@ -5,11 +5,11 @@ import com.czm.model.NoteEntity;
 import com.czm.model.UserEntity;
 import com.czm.repository.CourseRepository;
 import com.czm.repository.NoteRepository;
+import com.czm.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import java.util.List;
@@ -20,6 +20,8 @@ public class MainController {
     private CourseRepository courseRepository;
     @Autowired
     private NoteRepository noteRepository;
+    @Autowired
+    private UserRepository userRepository;
     /*首页*/
     @RequestMapping(value="/",method= RequestMethod.GET)
     public String index(){
@@ -75,5 +77,15 @@ public class MainController {
     public String exit(HttpSession httpSession){
         httpSession.removeAttribute("user");
         return "redirect:/";
+    }
+    /*注册表单验证*/
+    @RequestMapping(value = "/registerCheck",method = RequestMethod.POST,produces="text/html;charset=UTF-8;")
+    public @ResponseBody String registerCheck(@RequestBody UserEntity userEntity){
+        UserEntity user=userRepository.findOneByUsername(userEntity.getUsername());
+        if(user==null){
+            return null;
+        }else{
+            return "该用户名已被注册";
+        }
     }
 }

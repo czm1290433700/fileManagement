@@ -8,13 +8,14 @@
 <%@include file="../basicpage/extendFile.jsp" %>
 <link href="../../css/index.css" rel="stylesheet"/>
 <link href="../../css/home.css" rel="stylesheet"/>
+<script type="text/javascript" src="../../js/registerCheck.js"></script>
 </head>
 <body>
 	<%@include file="../basicpage/homeHead.jsp" %>
 	<div class="container-fluid body" id="wall" style="padding:160px;">
 		<div id="register-form">
 			<h4 style="padding-bottom:30px;">新用户注册</h4>
-			<form action="" method="post">
+			<form action="" method="post" onsubmit="return checkAll()">
 				<input type="hidden" name="courseNum" value="0"/>
 				<input type="hidden" name="messageNum" value="0"/>
 				<input type="hidden" name="followNum" value="0"/>
@@ -22,7 +23,7 @@
 					<tr>
 						<td><label for="username">用户名:</label></td>
 						<td><input class="form-control" id="username" name="username" type="text" placeholder="输入用户名"/></td>
-						<td></td>
+						<td><span id="result1"></span></td>
 					</tr>
 					<tr>
 						<td><label for="password">密码:</label></td>
@@ -32,12 +33,12 @@
 					<tr>
 						<td><label for="okpwd">确认密码:</label></td>
 						<td><input class="form-control" id="okpwd" name="okpwd" type="text" placeholder="确认密码" /></td>
-						<td></td>
+						<td><span id="result2"></span></td>
 					</tr>
 					<tr>
 						<td><label for="phone">手机号:</label></td>
 						<td><input class="form-control" id="phone" name="phone" type="text" placeholder="输入手机号" /></td>
-						<td></td>
+						<td><span id="result3"></span></td>
 					</tr>
 					<tr>
 						<td><label for="code">手机验证码:</label></td>
@@ -48,7 +49,7 @@
 						<td></td>
 					</tr>
 				</table>
-				<input type="submit" value="注册" class="btn btn-primary btn-lg"/>
+				<input id="add" type="submit" value="注册" class="btn btn-primary btn-lg"/>
 			</form>
 		</div>
 	</div>

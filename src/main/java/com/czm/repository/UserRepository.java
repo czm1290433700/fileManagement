@@ -29,4 +29,7 @@ public interface UserRepository extends JpaRepository<UserEntity,Integer> {
     @Transactional
     @Query("update UserEntity user set user.photo=:photo where user.userId=:userId")
     Integer UpdatePic(@Param("photo") String photo,@Param("userId") Integer userId);
+    /*通过用户名查找用户*/
+    @Query("select user from UserEntity user where user.username=:username")
+    UserEntity findOneByUsername(@Param("username")String username);
 }
