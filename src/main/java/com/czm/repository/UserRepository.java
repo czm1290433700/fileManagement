@@ -7,6 +7,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 public interface UserRepository extends JpaRepository<UserEntity,Integer> {
     /*更新用户基本信息*/
     @Modifying
@@ -32,4 +34,7 @@ public interface UserRepository extends JpaRepository<UserEntity,Integer> {
     /*通过用户名查找用户*/
     @Query("select user from UserEntity user where user.username=:username")
     UserEntity findOneByUsername(@Param("username")String username);
+    /*通过粉丝数量来查找用户*/
+    @Query("select user from UserEntity user order by user.followNum desc")
+    List<UserEntity> findAllByFollowNum();
 }

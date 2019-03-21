@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -112,111 +113,100 @@
 			<div class="section-head">
 				<h1 class="text-center" style="margin-bottom: 20px;">优秀笔记</h1>
 				<div class="colored-line"></div>
-				<div class="text-center">最受欢迎的三名笔记作者和他们的代表作</div>
+				<div class="text-center">最受欢迎的笔记作者和他们的代表作</div>
 			</div>
 			<div class="row" style="padding:0 30px;">
-				<div class="pic-module pic-module-first">
-					<div class="pic-container">
-						<img class="pic-container-inner" alt="" src="../../../pic/1.jpg"/>
-					</div>
-					<h4 style="margin-top:40px;">超级玛丽</h4>
-					<table class="pic-table">
-						<tr>
-							<td>签名：</td>
-							<td>路漫漫其修远兮，吾将上下而求索。</td>
-						</tr>
-						<tr>
-							<td>笔记：</td>
-							<td>242</td>
-						</tr>
-						<tr>
-							<td>留言：</td>
-							<td>31</td>
-						</tr>
-						<tr>
-							<td>粉丝：</td>
-							<td>32</td>
-						</tr>
-						<tr>
-							<td>著作：</td>
-							<td>
-								<ul>
-									<li><a href="#">超级玛丽1</a></li>
-									<li><a href="#">超级玛丽2</a></li>
-									<li><a href="#">超级玛丽3</a></li>
-								</ul>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="pic-module">
-					<div class="pic-container">
-						<img class="pic-container-inner" alt="" src="/pic/1.jpg"/>
-					</div>
-					<h4 style="margin-top:40px;">超级玛丽</h4>
-					<table class="pic-table">
-						<tr>
-							<td>签名：</td>
-							<td>路漫漫其修远兮，吾将上下而求索。</td>
-						</tr>
-						<tr>
-							<td>笔记：</td>
-							<td>242</td>
-						</tr>
-						<tr>
-							<td>留言：</td>
-							<td>31</td>
-						</tr>
-						<tr>
-							<td>粉丝：</td>
-							<td>32</td>
-						</tr>
-						<tr>
-							<td>著作：</td>
-							<td>
-								<ul>
-									<li><a href="#">超级玛丽1</a></li>
-									<li><a href="#">超级玛丽2</a></li>
-									<li><a href="#">超级玛丽3</a></li>
-								</ul>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="pic-module pic-module-last">
-					<div class="pic-container">
-						<img class="pic-container-inner" alt="" src="/pic/1.jpg"/>
-					</div>
-					<h4 style="margin-top:40px;">超级玛丽</h4>
-					<table class="pic-table">
-						<tr>
-							<td>签名：</td>
-							<td>路漫漫其修远兮，吾将上下而求索。</td>
-						</tr>
-						<tr>
-							<td>笔记：</td>
-							<td>242</td>
-						</tr>
-						<tr>
-							<td>留言：</td>
-							<td>31</td>
-						</tr>
-						<tr>
-							<td>粉丝：</td>
-							<td>32</td>
-						</tr>
-						<tr>
-							<td>著作：</td>
-							<td>
-								<ul>
-									<li><a href="#">超级玛丽1</a></li>
-									<li><a href="#">超级玛丽2</a></li>
-									<li><a href="#">超级玛丽3</a></li>
-								</ul>
-							</td>
-						</tr>
-					</table>
-				</div>
+				<c:choose>
+					<c:when test="${userEntities.size()==0}">
+						<span class="prompt">抱歉,暂时还没有用户`</span>
+					</c:when>
+					<c:when test="${userEntities.size()<3}">
+						<c:forEach items="${userEntities}" var="userEntity">
+							<div class="pic-module">
+								<div class="pic-container">
+									<img class="pic-container-inner" alt="" src="${userEntity.photo}"/>
+								</div>
+								<h4 style="margin-top:40px;">${userEntity.username}</h4>
+								<table class="pic-table">
+									<tr>
+										<td>签名：</td>
+										<td>${userEntity.signature}</td>
+									</tr>
+									<tr>
+										<td>笔记：</td>
+										<td>${userEntity.notesByUserId.size()}</td>
+									</tr>
+									<tr>
+										<td>留言：</td>
+										<td>${userEntity.messageNum}</td>
+									</tr>
+									<tr>
+										<td>粉丝：</td>
+										<td>${userEntity.followNum}</td>
+									</tr>
+									<tr>
+										<td>著作：</td>
+										<td>
+											<ul>
+												<c:if test="${userEntity.notesByUserId.size()==0}">
+													暂时还没写笔记哦~
+												</c:if>
+												<c:if test="${userEntity.notesByUserId.size()!=0}">
+													<c:forEach items="${userEntity.notesByUserId}" var="note" begin="0" end="2">
+														<li><a href="/infoNote/${note.noteId}">${note.title}</a></li>
+													</c:forEach>
+												</c:if>
+											</ul>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</c:forEach>
+					</c:when>
+					<c:otherwise>
+						<c:forEach items="${userEntities}" var="userEntity" begin="0" end="2">
+							<div class="pic-module">
+								<div class="pic-container">
+									<img class="pic-container-inner" alt="" src="${userEntity.photo}"/>
+								</div>
+								<h4 style="margin-top:40px;">${userEntity.username}</h4>
+								<table class="pic-table">
+									<tr>
+										<td>签名：</td>
+										<td>${userEntity.signature}</td>
+									</tr>
+									<tr>
+										<td>笔记：</td>
+										<td>${userEntity.notesByUserId.size()}</td>
+									</tr>
+									<tr>
+										<td>留言：</td>
+										<td>${userEntity.messageNum}</td>
+									</tr>
+									<tr>
+										<td>粉丝：</td>
+										<td>${userEntity.followNum}</td>
+									</tr>
+									<tr>
+										<td>著作：</td>
+										<td>
+											<ul>
+												<c:if test="${userEntity.notesByUserId.size()==0}">
+													暂时还没写笔记哦~
+												</c:if>
+												<c:if test="${userEntity.notesByUserId.size()!=0}">
+													<c:forEach items="${userEntity.notesByUserId}" var="note" begin="0" end="2">
+														<li><a href="/infoNote/${note.noteId}">${note.title}</a></li>
+													</c:forEach>
+												</c:if>
+											</ul>
+										</td>
+									</tr>
+								</table>
+							</div>
+						</c:forEach>
+					</c:otherwise>
+				</c:choose>
 			</div>
 		</div>	
 	</div>

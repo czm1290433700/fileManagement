@@ -24,7 +24,9 @@ public class MainController {
     private UserRepository userRepository;
     /*首页*/
     @RequestMapping(value="/",method= RequestMethod.GET)
-    public String index(){
+    public String index(ModelMap modelMap){
+        List<UserEntity> userEntities=userRepository.findAllByFollowNum();
+        modelMap.addAttribute("userEntities",userEntities);
         return "home/index";
     }
     /*注册*/

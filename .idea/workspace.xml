@@ -7,18 +7,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8e45e2e4-5bae-4ff9-ba7d-89b28923e930" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/registerCheck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/czm/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/czm/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/czm/model/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/czm/model/UserEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/czm/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/czm/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/fileManagement.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/czm/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/czm/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/czm/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/czm/model/UserEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/czm/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/czm/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/classes/META-INF/fileManagement.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/classes/com/czm/controller/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/fileManagement/WEB-INF/classes/com/czm/controller/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/classes/com/czm/model/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/fileManagement/WEB-INF/classes/com/czm/model/UserEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/classes/com/czm/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/fileManagement/WEB-INF/classes/com/czm/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/pages/home/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/fileManagement/WEB-INF/pages/home/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/fileManagement/WEB-INF/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/file/36d9e836-4233-4171-abe6-e3c10d5c9802.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/file/db08fd64-185f-4a1a-83e6-a5f38a2876a1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/pages/home/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/fileManagement/WEB-INF/pages/home/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/pic/2d1b887e-9fb0-439d-86ab-b0eef1fb9378.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/pic/5451f4be-4bca-473c-b0bd-2636bfdf59b5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/pic/ab206755-1fce-4a58-a500-94caa65d2ea8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/pic/c8698573-dd31-435a-8a3a-172b9bb9a046.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/fileManagement/WEB-INF/pic/e5682514-4877-446e-b1b0-f20d964daaff.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/controller/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="82" column="82" lean-forward="true" selection-start-line="82" selection-start-column="82" selection-end-line="82" selection-end-column="82" />
+            <state relative-caret-position="400">
+              <caret line="28" selection-start-line="28" selection-end-line="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#exit#0;class#MainController#0" />
@@ -57,52 +69,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/controller/UserController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/registerCheck.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="50" column="16" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
+            <state relative-caret-position="2129">
+              <caret line="194" column="61" selection-start-line="194" selection-start-column="61" selection-end-line="194" selection-end-column="61" />
               <folding>
-                <element signature="n#!!block;n#checkName#0" />
-                <element signature="e#217#297#0" />
-                <element signature="n#!!block;n#checkPassword#0" />
-                <element signature="n#!!block;n#checkAll#0" />
+                <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/register.jsp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/target/fileManagement/WEB-INF/pages/home/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="16" column="55" lean-forward="true" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+            <state relative-caret-position="107">
+              <caret line="151" column="61" selection-start-line="151" selection-start-column="61" selection-end-line="151" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicpage/extendFile.jsp">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalPage/course.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="50">
-              <caret line="2" column="66" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="66" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/model/UserEntity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="103" column="43" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
+            <state relative-caret-position="6350">
+              <caret line="368" column="64" selection-start-line="368" selection-start-column="64" selection-end-line="368" selection-end-column="64" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -125,12 +134,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/signAns.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/czm/model/CommentEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/czm/model/QuestiontagEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/czm/model/ReferenceEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/czm/model/AnswerEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/index.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/czm/repository/AnswerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/czm/model/QuestionEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/czm/repository/QuestionTagRepository.java" />
@@ -145,7 +151,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalPage/course.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/person-page.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/czm/model/FolderEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/czm/model/UserEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/czm/repository/FolderRepository.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/picInfo.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalPage/info/picInfo.jsp" />
@@ -170,12 +175,16 @@
         <option value="$PROJECT_DIR$/src/main/java/com/czm/controller/QuestionController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/czm/controller/NoteController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/home.css" />
-        <option value="$PROJECT_DIR$/src/main/java/com/czm/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/czm/controller/MainController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/czm/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/register.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/js/registerCheck.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/czm/repository/UserRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/css/index.css" />
+        <option value="$PROJECT_DIR$/src/main/java/com/czm/model/UserEntity.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/czm/controller/MainController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/index.jsp" />
+        <option value="$PROJECT_DIR$/target/fileManagement/WEB-INF/pages/home/index.jsp" />
       </list>
     </option>
   </component>
@@ -221,28 +230,6 @@
               <item name="fileManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fileManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fileManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="czm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fileManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fileManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fileManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fileManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -260,7 +247,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fileManagement" type="b2602c69:ProjectViewProjectNode" />
@@ -284,8 +271,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -293,25 +280,25 @@
     <property name="JPA.DatabaseSchemaImportDialog" value="c557fec3-e6e6-4cb3-b756-4882d8421a83" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553048816909" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553132949323" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/jquery.min.js" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.czm.repository" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="" />
       <recent name="com.czm.repository" />
       <recent name="com.czm.model" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.czm.repository" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\idea-workspace\fileManagement\src\main\webapp\WEB-INF\js" />
@@ -485,18 +472,30 @@
       <workItem from="1553001362866" duration="14000" />
       <workItem from="1553043917014" duration="2551000" />
       <workItem from="1553046508099" duration="2166000" />
-      <workItem from="1553048875427" duration="2060000" />
+      <workItem from="1553048875427" duration="2718000" />
+      <workItem from="1553129115372" duration="3843000" />
+      <workItem from="1553132993607" duration="186000" />
+      <workItem from="1553133229910" duration="189000" />
+      <workItem from="1553133487648" duration="247000" />
     </task>
+    <task id="LOCAL-00001" summary="注册表单验证">
+      <created>1553051080191</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1553051080191</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="250751000" />
+    <option name="totallyTimeSpent" value="255874000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.88235295" visible="true" weight="0.29088473" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9040307" visible="true" weight="0.3069705" />
       <window_info id="Structure" order="1" sideWeight="0.2638298" side_tool="true" weight="0.19906166" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -504,10 +503,10 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" sideWeight="0.52620965" side_tool="true" weight="0.20911528" />
-      <window_info id="Persistence" order="8" sideWeight="0.11764706" side_tool="true" visible="true" weight="0.29088473" />
+      <window_info id="Persistence" order="8" sideWeight="0.09596929" side_tool="true" visible="true" weight="0.3069705" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932975" weight="0.21499293" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49329758" visible="true" weight="0.4220963" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49932975" weight="0.21388102" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4953083" visible="true" weight="0.26203966" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932975" weight="0.3796034" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -515,11 +514,11 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49932975" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50469166" side_tool="true" weight="0.4220963" />
       <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49396783" weight="0.203966" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.3286119" />
       <window_info anchor="bottom" id="Application Servers" order="15" weight="0.32956153" />
       <window_info anchor="bottom" id="Duplicate detector" order="16" weight="0.32956153" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -574,6 +573,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="注册表单验证" />
+    <option name="LAST_COMMIT_MESSAGE" value="注册表单验证" />
+  </component>
   <component name="XDebuggerManager">
     <watches-manager>
       <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
@@ -583,57 +586,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/wangEditor.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31402" selection-start-column="31402" selection-end-column="31402" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/picInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="2" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/repository/FolderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="69" selection-start-line="12" selection-start-column="69" selection-end-line="12" selection-end-column="69" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/model/UserEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="402" column="5" selection-start-line="402" selection-start-column="5" selection-end-line="402" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalPage/info/picInfo.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/model/FolderEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="631">
-          <caret line="66" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/fileManagement/WEB-INF/js/add-document.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/model/FileEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -790,13 +742,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalPage/addNote.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/basic-info.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-300" />
@@ -843,13 +788,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/add-document.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -888,56 +826,10 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/login.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="33" column="68" selection-start-line="33" selection-start-column="68" selection-end-line="33" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/jquery.min.js" />
     <entry file="file://$PROJECT_DIR$/target/fileManagement/WEB-INF/js/registerCheck.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-825" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="103" column="43" selection-start-line="103" selection-start-column="43" selection-end-line="103" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicpage/extendFile.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="66" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/controller/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="82" column="82" lean-forward="true" selection-start-line="82" selection-start-column="82" selection-end-line="82" selection-end-column="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#exit#0;class#MainController#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="16" column="55" lean-forward="true" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/js/registerCheck.js">
@@ -950,6 +842,110 @@
             <element signature="n#!!block;n#checkPassword#0" />
             <element signature="n#!!block;n#checkAll#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="38" column="42" selection-start-line="38" selection-start-column="42" selection-end-line="38" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalPage/addNote.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="25" column="74" selection-start-line="25" selection-start-column="74" selection-end-line="25" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="863">
+          <caret line="100" column="17" selection-start-line="100" selection-start-column="17" selection-end-line="100" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/basicpage/extendFile.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="66" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="16" column="55" selection-start-line="16" selection-start-column="55" selection-end-line="16" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/fileManagement/WEB-INF/pages/home/infoNote.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/fileManagement/WEB-INF/pages/home/signNote.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/controller/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#exit#0;class#MainController#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/personalPage/course.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/czm/model/UserEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6350">
+          <caret line="368" column="64" selection-start-line="368" selection-start-column="64" selection-end-line="368" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="60" selection-start-line="4" selection-start-column="60" selection-end-line="4" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2129">
+          <caret line="194" column="61" selection-start-line="194" selection-start-column="61" selection-end-line="194" selection-end-column="61" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/fileManagement/WEB-INF/pages/home/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="151" column="61" selection-start-line="151" selection-start-column="61" selection-end-line="151" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -1032,7 +1028,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: junit:junit:4.11</last-edited>
+          <last-edited>Maven: xml-apis:xml-apis:1.0.b2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -366,7 +366,7 @@ public class UserEntity {
         this.messagesByUserId_0 = messagesByUserId_0;
     }
 
-    @OneToMany(mappedBy = "userByUserId")
+    @OneToMany(mappedBy = "userByUserId",fetch = FetchType.EAGER)
     public Collection<NoteEntity> getNotesByUserId() {
         return notesByUserId;
     }
