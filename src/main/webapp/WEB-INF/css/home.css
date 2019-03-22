@@ -96,6 +96,7 @@
 		.comment-form{width:100%;margin-bottom:30px;}
 		.comment{width:100%;font-size:14px;padding:10px 0;border-top:1px #C6D1D9 solid;}
 		.comment-text{font-size:13px;}
+		.comment-divider{height:1px;width: 100%;border-top:1px #C6D1D9 solid;display: block;margin:3px 0;}
 		.com-comment{font-size:12px;float:right;color:#8B8E90;margin-right:30px;}
 		.com-time{font-size:12px;float:right;color:#8B8E90;}
 	.otherQues{list-style-type: none;margin:0;padding:0;}

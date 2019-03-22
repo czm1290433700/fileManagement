@@ -6,4 +6,5 @@ $(function () {
     var localTime=currentTime.toLocaleTimeString();
     var time=year+"-"+month+"-"+day+" "+localTime;
     $("#createTime").val(time);
+    $(".createTime").val(time);
 })

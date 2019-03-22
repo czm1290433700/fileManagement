@@ -7,10 +7,10 @@
 <%@include file="../basicpage/extendFile.jsp" %>
 <link href="../../css/index.css" rel="stylesheet"/>
 <link href="../../css/home.css" rel="stylesheet"/>
-<script src="../../js/question.js"></script>
 <script src="../../js/infoAns.js"></script>
 <script src="../../js/editor.js"></script>
 <script src="../../js/createTime.js"></script>
+<script src="../../js/alert.js"></script>
 <title>智存网-回答问题</title>
 </head>
 <body>
@@ -68,14 +68,25 @@
 								<div class="best-comment"><span class="fa fa-comments"></span>评论(${bestAnswer.commentsByAnswerId.size()})</div>
 							</div>
 							<div class="comment-area rounded clearfix">
-								<div class="comment-form clearfix">
-									<input type="text" class="form-control col-sm-11" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
-									<a href="#"><button type="button" class="btn" style="font-size:13px;float:left;">评论</button></a>
-								</div>
+								<c:if test="${user==null}">
+									<form class="comment-form clearfix" method="post" onsubmit="false">
+										<input type="text" class="form-control col-sm-10" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
+										<button type="button" class="btn loginAlert" style="font-size:13px;float:left;">评论</button>
+									</form>
+								</c:if>
+								<c:if test="${user!=null}">
+									<form action="/infoAns/commentSubmit/${questionEntity.questionId}" class="comment-form clearfix" method="post">
+										<input type="hidden" name="commentTime" class="createTime">
+										<input type="hidden" name="userBySenderId.userId" value="${user.userId}">
+										<input type="hidden" name="answerByAnswerId.answerId" value="${bestAnswer.answerId}">
+										<input type="text" name="content" class="form-control col-sm-10" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
+										<input type="submit" class="btn" style="font-size:13px;float:left;" value="评论">
+									</form>
+								</c:if>
 								<div class="comment row" style="margin:0;">
 									<c:forEach items="${bestAnswer.commentsByAnswerId}" var="comment">
 										<div class="col-sm-3">
-											<img src="${comment.userBySenderId.photo}" class="rounded-circle" style="width:30px;"/>回复<span style="font-weight:bold;">${answer.userByAnswerManId.username}:</span>
+											<img src="${comment.userBySenderId.photo}" class="rounded-circle" style="width:30px;"/><span style="font-weight:bold;">:</span>
 										</div>
 										<div class="col-sm-9">
 											<div class="comment-text text-justify">${comment.content}</div>
@@ -83,11 +94,23 @@
 											<div class="com-comment"><span class="fa fa-comments"></span>回复</div>
 										</div>
 										<div class="comment-area rounded clearfix">
-											<div class="comment-form clearfix">
-												<input type="text" class="form-control col-sm-11" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
-												<a href="#"><button type="button" class="btn" style="font-size:13px;float:left;">评论</button></a>
-											</div>
+											<c:if test="${user==null}">
+												<form class="comment-form clearfix" method="post" onsubmit="false">
+													<input type="text" class="form-control col-sm-10" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
+													<button type="button" class="btn loginAlert" style="font-size:13px;float:left;">评论</button>
+												</form>
+											</c:if>
+											<c:if test="${user!=null}">
+												<form action="/infoAns/commentSubmit/${questionEntity.questionId}" class="comment-form clearfix" method="post">
+													<input type="hidden" name="commentTime" class="createTime">
+													<input type="hidden" name="userBySenderId.userId" value="${user.userId}">
+													<input type="hidden" name="answerByAnswerId.answerId" value="${bestAnswer.answerId}">
+													<input type="text" name="content" class="form-control col-sm-10" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
+													<input type="submit" class="btn" style="font-size:13px;float:left;" value="评论">
+												</form>
+											</c:if>
 										</div>
+                                        <div class="comment-divider"></div>
 									</c:forEach>
 								</div>
 							</div>
@@ -121,9 +144,50 @@
 									</c:if>
 								</div>
 								<div class="comment-area rounded clearfix">
-									<div class="comment-form clearfix">
-										<input type="text" class="form-control col-sm-11" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
-										<a href="#"><button type="button" class="btn" style="font-size:13px;float:left;">评论</button></a>
+									<c:if test="${user==null}">
+										<form class="comment-form clearfix" method="post" onsubmit="false">
+											<input type="text" class="form-control col-sm-10" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
+											<button type="button" class="btn  loginAlert" style="font-size:13px;float:left;">评论</button>
+										</form>
+									</c:if>
+									<c:if test="${user!=null}">
+										<form action="/infoAns/commentSubmit/${questionEntity.questionId}" class="comment-form clearfix" method="post">
+											<input type="hidden" name="commentTime" class="createTime">
+											<input type="hidden" name="userBySenderId.userId" value="${user.userId}">
+											<input type="hidden" name="answerByAnswerId.answerId" value="${answer.answerId}">
+											<input type="text" name="content" class="form-control col-sm-10" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
+											<input type="submit" class="btn" style="font-size:13px;float:left;" value="评论">
+										</form>
+									</c:if>
+									<div class="comment row" style="margin:0;">
+										<c:forEach items="${answer.commentsByAnswerId}" var="comment">
+											<div class="col-sm-3">
+												<img src="${comment.userBySenderId.photo}" class="rounded-circle" style="width:30px;"/><span style="font-weight:bold;">:</span>
+											</div>
+											<div class="col-sm-9">
+												<div class="comment-text text-justify">${comment.content}</div>
+												<span class="com-time">${comment.commentTime}</span>
+												<div class="com-comment"><span class="fa fa-comments"></span>回复</div>
+											</div>
+											<div class="comment-area rounded clearfix">
+												<c:if test="${user==null}">
+													<form class="comment-form clearfix" method="post" onsubmit="false">
+														<input type="text" class="form-control col-sm-10" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
+														<button type="button" class="btn loginAlert" style="font-size:13px;float:left;">评论</button>
+													</form>
+												</c:if>
+												<c:if test="${user!=null}">
+													<form action="/infoAns/commentSubmit/${questionEntity.questionId}" class="comment-form clearfix" method="post">
+														<input type="hidden" name="commentTime" class="createTime">
+														<input type="hidden" name="userBySenderId.userId" value="${user.userId}">
+														<input type="hidden" name="answerByAnswerId.answerId" value="${answer.answerId}">
+														<input type="text" name="content" class="form-control col-sm-10" style="font-size:13px;margin-right:5px;float:left;" placeholder="发表意见"/>
+														<input type="submit" class="btn" style="font-size:13px;float:left;" value="评论">
+													</form>
+												</c:if>
+											</div>
+                                            <div class="comment-divider"></div>
+										</c:forEach>
 									</div>
 								</div>
 							</div>

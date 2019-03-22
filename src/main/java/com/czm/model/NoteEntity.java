@@ -1,5 +1,8 @@
 package com.czm.model;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Collection;
@@ -97,6 +100,7 @@ public class NoteEntity {
     }
 
     @OneToMany(mappedBy = "noteByNoteId",fetch = FetchType.EAGER)
+    @Fetch(FetchMode.SUBSELECT)
     public Collection<CommentEntity> getCommentsByNoteId() {
         return commentsByNoteId;
     }

@@ -1,13 +1,7 @@
 package com.czm.controller;
 
-import com.czm.model.AnswerEntity;
-import com.czm.model.QuestionEntity;
-import com.czm.model.QuestiontagEntity;
-import com.czm.model.ReferenceEntity;
-import com.czm.repository.AnswerRepository;
-import com.czm.repository.QuestionRepository;
-import com.czm.repository.QuestionTagRepository;
-import com.czm.repository.ReferenceRespository;
+import com.czm.model.*;
+import com.czm.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -16,7 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Controller
 public class QuestionController {
@@ -28,6 +24,8 @@ public class QuestionController {
     ReferenceRespository referenceRespository;
     @Autowired
     AnswerRepository answerRepository;
+    @Autowired
+    CommentRepository commentRepository;
     /*提问上传*/
     @RequestMapping(value = "/question",method = RequestMethod.POST)
     public String QuestionSubmit(@ModelAttribute QuestionEntity questionEntity){

@@ -1,5 +1,6 @@
 package com.czm.repository;
 
+import com.czm.model.AnswerEntity;
 import com.czm.model.QuestionEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;

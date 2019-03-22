@@ -8,7 +8,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "comment", schema = "filemanager", catalog = "")
 public class CommentEntity {
-    private Timestamp commentTime;
+    private String commentTime;
     private String content;
     private int commentId;
     private UserEntity userBySenderId;
@@ -18,11 +18,11 @@ public class CommentEntity {
 
     @Basic
     @Column(name = "commentTime")
-    public Timestamp getCommentTime() {
+    public String getCommentTime() {
         return commentTime;
     }
 
-    public void setCommentTime(Timestamp commentTime) {
+    public void setCommentTime(String commentTime) {
         this.commentTime = commentTime;
     }
 
@@ -72,7 +72,7 @@ public class CommentEntity {
     }
 
     @ManyToOne
-    @JoinColumn(name = "noteId", referencedColumnName = "NoteId", nullable = false)
+    @JoinColumn(name = "noteId", referencedColumnName = "NoteId")
     public NoteEntity getNoteByNoteId() {
         return noteByNoteId;
     }

@@ -9,6 +9,6 @@ $(function(){
 		$(this).parent().next().slideToggle();
 	})
 	$(".com-comment").click(function(){
-		$(this).parent().parent().next().slideToggle();
+		$(this).parent().next().slideToggle();
 	})
 })
