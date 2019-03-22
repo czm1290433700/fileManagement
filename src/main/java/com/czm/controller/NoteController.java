@@ -191,6 +191,8 @@ public class NoteController {
     @RequestMapping(value="/signNote/{courseId}/{id}",method=RequestMethod.POST)
     public String signNotePost(@PathVariable("courseId") Integer courseId,@PathVariable("id")Integer id,@ModelAttribute("keyword") String keyword,@ModelAttribute("tableId") int tableId,ModelMap modelMap){
         CourseEntity course=courseRepository.findOne(courseId);
+        modelMap.addAttribute("course",course);
+        modelMap.addAttribute("id",id);
         if(tableId==1){
             List<NoteEntity> LatestNotes=noteRepository.fuzzyFindLatestNoteByCourseId(keyword,courseId);
             List<NoteEntity> HottestNotes=noteRepository.findHottestNote();
