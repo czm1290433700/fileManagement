@@ -148,9 +148,31 @@ public class NoteController {
     public String noteRecommend(@PathVariable("id") Integer id, ModelMap modelMap){
         List<CourseEntity> courseEntities=courseRepository.findAllByNoteNumDesc();
         List<NoteEntity> LatestNotes=noteRepository.findLatestNote();
+        List<NoteEntity> HottestNotes=noteRepository.findHottestNote();
         modelMap.addAttribute("courseEntities",courseEntities);
         modelMap.addAttribute("LatestNotes",LatestNotes);
+        modelMap.addAttribute("HottestNotes",HottestNotes);
         modelMap.addAttribute("id",id);
+        return "home/noteRecommend";
+    }
+    /*笔记推荐页面模糊查询*/
+    @RequestMapping(value = "/noteRecommend/{id}",method = RequestMethod.POST)
+    public String noteRecommendPost(@PathVariable("id")Integer id,@ModelAttribute("keyword") String keyword,@ModelAttribute("tableId") int tableId,ModelMap modelMap){
+        List<CourseEntity> courseEntities=courseRepository.findAllByNoteNumDesc();
+        modelMap.addAttribute("courseEntities",courseEntities);
+        modelMap.addAttribute("id",id);
+        if(tableId==1){
+            List<NoteEntity> LatestNotes=noteRepository.fuzzyFindLatestNote(keyword);
+            List<NoteEntity> HottestNotes=noteRepository.findHottestNote();
+            modelMap.addAttribute("LatestNotes",LatestNotes);
+            modelMap.addAttribute("HottestNotes",HottestNotes);
+        }
+        if(tableId==2){
+            List<NoteEntity> LatestNotes=noteRepository.findLatestNote();
+            List<NoteEntity> HottestNotes=noteRepository.fuzzyFindHottestNote(keyword);
+            modelMap.addAttribute("LatestNotes",LatestNotes);
+            modelMap.addAttribute("HottestNotes",HottestNotes);
+        }
         return "home/noteRecommend";
     }
     /*笔记标签*/
@@ -158,9 +180,29 @@ public class NoteController {
     public String signNote(@PathVariable("courseId") Integer courseId,@PathVariable("id") Integer id,ModelMap modelMap){
         CourseEntity course=courseRepository.findOne(courseId);
         List<NoteEntity> LatestNotes=noteRepository.findLatestNoteByCourseId(courseId);
+        List<NoteEntity> HottestNotes=noteRepository.findHottestNoteByCourseId(courseId);
         modelMap.addAttribute("course",course);
         modelMap.addAttribute("LatestNotes",LatestNotes);
+        modelMap.addAttribute("HottestNotes",HottestNotes);
         modelMap.addAttribute("id",id);
+        return "home/signNote";
+    }
+    /*笔记标签模糊查询*/
+    @RequestMapping(value="/signNote/{courseId}/{id}",method=RequestMethod.POST)
+    public String signNotePost(@PathVariable("courseId") Integer courseId,@PathVariable("id")Integer id,@ModelAttribute("keyword") String keyword,@ModelAttribute("tableId") int tableId,ModelMap modelMap){
+        CourseEntity course=courseRepository.findOne(courseId);
+        if(tableId==1){
+            List<NoteEntity> LatestNotes=noteRepository.fuzzyFindLatestNoteByCourseId(keyword,courseId);
+            List<NoteEntity> HottestNotes=noteRepository.findHottestNote();
+            modelMap.addAttribute("LatestNotes",LatestNotes);
+            modelMap.addAttribute("HottestNotes",HottestNotes);
+        }
+        if(tableId==2){
+            List<NoteEntity> LatestNotes=noteRepository.findLatestNote();
+            List<NoteEntity> HottestNotes=noteRepository.fuzzyFindHottestNoteByCourseId(keyword,courseId);
+            modelMap.addAttribute("LatestNotes",LatestNotes);
+            modelMap.addAttribute("HottestNotes",HottestNotes);
+        }
         return "home/signNote";
     }
     /*修改笔记GET*/

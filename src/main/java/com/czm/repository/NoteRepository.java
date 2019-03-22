@@ -25,9 +25,15 @@ public interface NoteRepository extends JpaRepository<NoteEntity,Integer> {
     /*通过创建时间获得最新的笔记*/
     @Query("select note from NoteEntity note order by note.createTime desc")
     List<NoteEntity> findLatestNote();
+    /*通过笔记访问量获得最热笔记*/
+    @Query("select note from NoteEntity note order by note.view desc ")
+    List<NoteEntity> findHottestNote();
     /*通过创建时间获得最新指定课程的笔记*/
     @Query("select note from NoteEntity note where note.courseByCourseId.courseId=:courseId order by note.createTime desc")
     List<NoteEntity> findLatestNoteByCourseId(@Param("courseId") Integer courseId);
+    /*通过笔记访问量获得最热指定课程的笔记*/
+    @Query("select note from NoteEntity note where note.courseByCourseId.courseId=:courseId order by note.view desc")
+    List<NoteEntity> findHottestNoteByCourseId(@Param("courseId") Integer courseId);
     /*通过isPublic和userId查询*/
     @Query("select note from NoteEntity note where note.isPublic=:isPublic and note.userByUserId.userId=:userId")
     List<NoteEntity> selectNoteByIsPublicAndUserId(@Param("isPublic") Byte isPublic,@Param("userId") Integer userId);
@@ -66,4 +72,24 @@ public interface NoteRepository extends JpaRepository<NoteEntity,Integer> {
     @Transactional
     @Query("update NoteEntity note set note.view=note.view+1 where note.noteId=:noteId")
     Integer UpdateNoteView(@Param("noteId")Integer noteId);
+    /*对最新笔记进行模糊查询*/
+    @Query("select note from NoteEntity note where note.userByUserId.username like " +
+            "%:keyword% or note.title like %:keyword% or note.courseByCourseId.name like %:keyword% order by " +
+            "note.createTime desc ")
+    List<NoteEntity> fuzzyFindLatestNote(@Param("keyword")String keyword);
+    /*对最热笔记进行模糊查询*/
+    @Query("select note from NoteEntity note where note.userByUserId.username like " +
+            "%:keyword% or note.title like %:keyword% or note.courseByCourseId.name like %:keyword% order by " +
+            "note.view desc ")
+    List<NoteEntity> fuzzyFindHottestNote(@Param("keyword")String keyword);
+    /*对指定课程最新笔记进行模糊查询*/
+    @Query("select note from NoteEntity note where note.userByUserId.username like " +
+            "%:keyword% or note.title like %:keyword% or note.courseByCourseId.name like %:keyword% and note.courseByCourseId" +
+            ".courseId=:courseId order by note.createTime desc ")
+    List<NoteEntity> fuzzyFindLatestNoteByCourseId(@Param("keyword")String keyword,@Param("courseId")Integer courseId);
+    /*对指定课程最热笔记进行模糊查询*/
+    @Query("select note from NoteEntity note where note.userByUserId.username like " +
+            "%:keyword% or note.title like %:keyword% or note.courseByCourseId.name like %:keyword% and note.courseByCourseId" +
+            ".courseId=:courseId order by note.view desc ")
+    List<NoteEntity> fuzzyFindHottestNoteByCourseId(@Param("keyword")String keyword,@Param("courseId")Integer courseId);
 }
