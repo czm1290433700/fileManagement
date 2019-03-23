@@ -56,6 +56,26 @@ public class QuestionController {
         modelMap.addAttribute("HottestQuestions",HottestQuestions);
         return "home/answer";
     }
+    /*回答问题筛选请求*/
+    @RequestMapping(value = "/answer/{id}",method = RequestMethod.POST)
+    public String answerPost(@PathVariable("id")Integer id,@ModelAttribute("keyword") String keyword,@ModelAttribute("tableId") int tableId,ModelMap modelMap){
+        List<QuestiontagEntity> questiontagEntities=questionTagRepository.findAllByUseTimes();
+        modelMap.addAttribute("questiontagEntities",questiontagEntities);
+        modelMap.addAttribute("id",id);
+        if(tableId==1){
+            List<QuestionEntity> LatestQuestions=questionRepository.fuzzyFindAllByCreateTimeDesc(keyword);
+            List<QuestionEntity> HottestQuestions=questionRepository.findAllByBrowseNumDesc();
+            modelMap.addAttribute("LatestQuestions",LatestQuestions);
+            modelMap.addAttribute("HottestQuestions",HottestQuestions);
+        }
+        if(tableId==2){
+            List<QuestionEntity> LatestQuestions=questionRepository.findAllByCreateTimeDesc();
+            List<QuestionEntity> HottestQuestions=questionRepository.fuzzyFindAllByBrowseNumDesc(keyword);
+            modelMap.addAttribute("LatestQuestions",LatestQuestions);
+            modelMap.addAttribute("HottestQuestions",HottestQuestions);
+        }
+        return "home/answer";
+    }
     /*问题标签*/
     @RequestMapping(value = "/signAns/{questionTagId}/{id}",method = RequestMethod.GET)
     public String signAns(@PathVariable("questionTagId")Integer questionTagId,@PathVariable("id") Integer id,ModelMap modelMap){
@@ -66,6 +86,26 @@ public class QuestionController {
         modelMap.addAttribute("LatestQuestions",LatestQuestions);
         modelMap.addAttribute("HottestQuestions",HottestQuestions);
         modelMap.addAttribute("id",id);
+        return "home/signAns";
+    }
+    /*问题标签模糊查询*/
+    @RequestMapping(value = "/signAns/{questionTagId}/{id}",method = RequestMethod.POST)
+    public String signAnsPost(@PathVariable("questionTagId")Integer questionTagId,@PathVariable("id") Integer id,@ModelAttribute("keyword") String keyword,@ModelAttribute("tableId") int tableId,ModelMap modelMap){
+        QuestiontagEntity questiontagEntity=questionTagRepository.findOne(questionTagId);
+        modelMap.addAttribute("name",questiontagEntity.getName());
+        modelMap.addAttribute("id",id);
+        if(tableId==1){
+            List<QuestionEntity> LatestQuestions=questionRepository.fuzzyFindAllByTagContentAndCreateTimeDesc(questiontagEntity.getName(),keyword);
+            List<QuestionEntity> HottestQuestions=questionRepository.findAllByTagContentAndBrowseNum(questiontagEntity.getName());
+            modelMap.addAttribute("LatestQuestions",LatestQuestions);
+            modelMap.addAttribute("HottestQuestions",HottestQuestions);
+        }
+        if(tableId==2){
+            List<QuestionEntity> LatestQuestions=questionRepository.findAllByTagContentAndCreateTimeDesc(questiontagEntity.getName());
+            List<QuestionEntity> HottestQuestions=questionRepository.fuzzyFindAllByTagContentAndBrowseNum(questiontagEntity.getName(),keyword);
+            modelMap.addAttribute("LatestQuestions",LatestQuestions);
+            modelMap.addAttribute("HottestQuestions",HottestQuestions);
+        }
         return "home/signAns";
     }
     /*问题内容*/

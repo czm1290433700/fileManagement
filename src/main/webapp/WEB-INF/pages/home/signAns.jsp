@@ -8,6 +8,7 @@
 <link href="../../css/index.css" rel="stylesheet"/>
 <link href="../../css/home.css" rel="stylesheet"/>
 <script src="../../js/answer.js"></script>
+<script src="../../js/screeningForm.js"></script>
 <title>智存网-回答问题</title>
 </head>
 <body>
@@ -28,11 +29,12 @@
 					</ul>
 				</div>
 				<div class="supplyAns-body col-sm-12" style="padding:0px 40px;padding-bottom:40px;">
-					<div class="chooseAns clearfix">
-						<input class="form-control" type="text" name="choice" placeholder="按关键词筛选" style="width:200px;font-size:14px;float:left;"/>
-						<a class="go-search rounded" href="#" style="color: #35b558;text-decoration: none;">筛选</a>
+					<form class="chooseAns clearfix" method="post" onsubmit="return checkScreeningForm()">
+						<input type="hidden" name="tableId" id="tableId">
+						<input class="form-control" id="keyword" type="text" name="keyword" placeholder="按关键词筛选" style="width:200px;font-size:14px;float:left;"/>
+						<input type="submit" class="go-search rounded" value="筛选" style="color: #35b558"/>
 						<a href="#" class="refresh" onclick="location.reload()"><span class="fa fa-refresh"></span>刷新</a>
-					</div>
+					</form>
 					<div class="answer-body clearfix">
 						<div id="table1">
 							<table class="table table-hover" style="font-size:15px;">

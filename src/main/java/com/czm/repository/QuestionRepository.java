@@ -17,12 +17,28 @@ public interface QuestionRepository extends JpaRepository<QuestionEntity,Integer
     /*按照浏览量获得最热问题*/
     @Query("select question from QuestionEntity question order by question.browseNum desc ")
     List<QuestionEntity> findAllByBrowseNumDesc();
+    /*对最新问题进行模糊查询*/
+    @Query("select question from QuestionEntity question where question.title like %:keyword% or question.tagContent like " +
+            "%:keyword% order by question.createTime desc ")
+    List<QuestionEntity> fuzzyFindAllByCreateTimeDesc(@Param("keyword")String keyword);
+    /*对最热问题进行模糊查询*/
+    @Query("select question from QuestionEntity question where question.title like %:keyword% or question.tagContent like " +
+            "%:keyword% order by question.browseNum desc ")
+    List<QuestionEntity> fuzzyFindAllByBrowseNumDesc(@Param("keyword")String keyword);
     /*按照课程标签和时间倒序获得最新问题*/
     @Query("select question from QuestionEntity question where question.tagContent like %:name% order by question.createTime desc ")
     List<QuestionEntity> findAllByTagContentAndCreateTimeDesc(@Param("name")String name);
     /*按照课程标签和浏览量获得最热问题*/
     @Query("select question from QuestionEntity question where question.tagContent like %:name% order by question.browseNum desc ")
     List<QuestionEntity> findAllByTagContentAndBrowseNum(@Param("name") String name);
+    /*按照课程标签和时间倒序获得最新问题,并进行模糊查询*/
+    @Query("select question from QuestionEntity question where question.tagContent like %:name% and question.title like " +
+            "%:keyword% or question.tagContent like %:keyword% order by question.createTime desc ")
+    List<QuestionEntity> fuzzyFindAllByTagContentAndCreateTimeDesc(@Param("name")String name,@Param("keyword")String keyword);
+    /*按照课程标签和浏览量获得最热问题，并进行模糊查询*/
+    @Query("select question from QuestionEntity question where question.tagContent like %:name% and question.title like " +
+            "%:keyword% or question.tagContent like %:keyword% order by question.browseNum desc ")
+    List<QuestionEntity> fuzzyFindAllByTagContentAndBrowseNum(@Param("name") String name,@Param("keyword")String keyword);
     /*通过时间获取question对象*/
     @Query("select question from QuestionEntity question where question.createTime=:createTime")
     QuestionEntity findOneByCreateTime(@Param("createTime") String createTime);
