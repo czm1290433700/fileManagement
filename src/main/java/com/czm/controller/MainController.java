@@ -80,14 +80,24 @@ public class MainController {
         httpSession.removeAttribute("user");
         return "redirect:/";
     }
-    /*注册表单验证*/
-    @RequestMapping(value = "/registerCheck",method = RequestMethod.POST,produces="text/html;charset=UTF-8;")
-    public @ResponseBody String registerCheck(@RequestBody UserEntity userEntity){
+    /*注册表单验证姓名*/
+    @RequestMapping(value = "/registerCheck/checkName",method = RequestMethod.POST,produces="text/html;charset=UTF-8;")
+    public @ResponseBody String registerCheckName(@RequestBody UserEntity userEntity){
         UserEntity user=userRepository.findOneByUsername(userEntity.getUsername());
         if(user==null){
             return null;
         }else{
             return "该用户名已被注册";
+        }
+    }
+    /*注册表单验证电话*/
+    @RequestMapping(value = "/registerCheck/checkPhone",method = RequestMethod.POST,produces="text/html;charset=UTF-8;")
+    public @ResponseBody String registerCheckPhone(@RequestBody UserEntity userEntity){
+        UserEntity user=userRepository.findOneByPhone(userEntity.getPhone());
+        if(user!=null){
+            return "该手机号已被注册";
+        }else{
+            return null;
         }
     }
 }

@@ -13,7 +13,7 @@ function checkName(){
     else{
         var value={"username":username};
         $.ajax({
-            url:"/registerCheck",
+            url:"/registerCheck/checkName",
             type:"post",
             contentType:'application/json;charset=utf-8',
             data:JSON.stringify(value),
@@ -21,7 +21,7 @@ function checkName(){
                 $("#result1").text(data);
             }
         })
-        if($("#result1").val()==null){
+        if($("#result1").val()==""){
             return true;
         }
         else{
@@ -52,11 +52,28 @@ function checkPhone() {
         $("#result3").text("手机号不能为空");
         return false;
     }
-    if(/^1[34578]\d{9}$/.test(phone)){
-        return true;
-    }
     else{
-        $("#result3").text("请输入有效手机号码");
+        var value={"phone":phone};
+        $.ajax({
+            url:"/registerCheck/checkPhone",
+            type:"post",
+            contentType:'application/json;charset=utf-8',
+            data:JSON.stringify(value),
+            success:function (data) {
+                $("#result3").text(data);
+            }
+        })
+        alert($("#result3").val());
+        if($("#result3").val()==""){
+            if(/^1[34578]\d{9}$/.test(phone)){
+                return true;
+            }else{
+                $("#result3").text("请输入有效手机号码");
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 }
 function checkAll() {

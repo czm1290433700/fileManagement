@@ -20,7 +20,7 @@ public interface UserRepository extends JpaRepository<UserEntity,Integer> {
                          @Param("month") String month, @Param("day") String day, @Param("major") String major,
                          @Param("semester") String semester, @Param("signature") String signature,
                          @Param("province") String province, @Param("city") String city, @Param("area") String area,
-                         @Param("school") String school, @Param("phone")long phone,@Param("userId") int userId);
+                         @Param("school") String school, @Param("phone")String phone,@Param("userId") int userId);
     /*更换用户密码*/
     @Modifying
     @Transactional
@@ -37,4 +37,7 @@ public interface UserRepository extends JpaRepository<UserEntity,Integer> {
     /*通过粉丝数量来查找用户*/
     @Query("select user from UserEntity user order by user.followNum desc")
     List<UserEntity> findAllByFollowNum();
+    /*通过手机号来查找用户*/
+    @Query("select user from UserEntity user where user.phone=:phone")
+    UserEntity findOneByPhone(@Param("phone")String phone);
 }

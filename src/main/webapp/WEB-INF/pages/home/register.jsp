@@ -8,7 +8,7 @@
 <%@include file="../basicpage/extendFile.jsp" %>
 <link href="../../css/index.css" rel="stylesheet"/>
 <link href="../../css/home.css" rel="stylesheet"/>
-<script type="text/javascript" src="../../js/registerCheck.js"></script>
+<script src="../../js/registerCheck.js"></script>
 </head>
 <body>
 	<%@include file="../basicpage/homeHead.jsp" %>

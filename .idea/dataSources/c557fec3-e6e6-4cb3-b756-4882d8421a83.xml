@@ -1054,10 +1054,8 @@
     <column id="261" parent="231" name="commentTime">
       <Position>2</Position>
       <Comment>评论的时间</Comment>
-      <DataType>timestamp|0s</DataType>
-      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <DataType>varchar(50)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
-      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
     </column>
     <column id="262" parent="231" name="content">
       <Position>3</Position>
@@ -2046,7 +2044,7 @@
     </column>
     <column id="431" parent="246" name="phone">
       <Position>3</Position>
-      <DataType>bigint(11)|0s</DataType>
+      <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -2083,13 +2081,15 @@
     <column id="437" parent="246" name="semester">
       <Position>9</Position>
       <DataType>varchar(20)|0s</DataType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;暂无&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="438" parent="246" name="signature">
       <Position>10</Position>
       <DataType>varchar(50)|0s</DataType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;暂无&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="439" parent="246" name="photo">
@@ -2101,7 +2101,7 @@
     <column id="440" parent="246" name="sex">
       <Position>12</Position>
       <DataType>varchar(10)|0s</DataType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <DefaultExpression>&apos;暂无&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="441" parent="246" name="province">
@@ -2113,7 +2113,6 @@
     <column id="442" parent="246" name="city">
       <Position>14</Position>
       <DataType>varchar(20)|0s</DataType>
-      <DefaultExpression>&apos;&apos;</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
     <column id="443" parent="246" name="area">

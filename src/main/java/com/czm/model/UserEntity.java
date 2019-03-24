@@ -9,7 +9,7 @@ import java.util.Objects;
 public class UserEntity {
     private int userId;
     private String username;
-    private long phone;
+    private String phone;
     private String major;
     private String school;
     private Integer age;
@@ -64,11 +64,11 @@ public class UserEntity {
 
     @Basic
     @Column(name = "phone")
-    public long getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(long phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

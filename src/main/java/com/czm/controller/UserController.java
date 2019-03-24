@@ -5,9 +5,7 @@ import com.czm.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.http.HttpServletRequest;
@@ -21,16 +19,15 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
     /*登录验证*/
-    @RequestMapping(value="/login/loginCheck",method= RequestMethod.POST)
-    public String login(@ModelAttribute UserEntity userEntity, ModelMap modelMap, HttpSession httpSession){
-        UserEntity user=userRepository.findOne(userEntity.getUserId());
+    @RequestMapping(value="/login/loginCheck",method= RequestMethod.POST,produces="text/html;charset=UTF-8;")
+    public @ResponseBody String login(@RequestBody UserEntity userEntity, HttpSession httpSession){
+        UserEntity user=userRepository.findOneByPhone(userEntity.getPhone());
         if(userEntity.getPassword().equals(user.getPassword())){
             httpSession.setAttribute("user",user);
-            return "redirect:/personalPage/home/"+userEntity.getUserId();
+            return null;
         }
         else{
-            modelMap.addAttribute("message","密码错误或账户名不存在！");
-            return "redirect:/login";
+            return "用户名不存在或密码错误！";
         }
     }
     /*账户注册*/
