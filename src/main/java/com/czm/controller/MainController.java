@@ -100,4 +100,13 @@ public class MainController {
             return null;
         }
     }
+    @RequestMapping(value = "/checkPassword",method = RequestMethod.POST,produces = "text/html;charset=UTF-8;")
+    public @ResponseBody String checkPassword(@RequestBody UserEntity userEntity,HttpSession httpSession){
+        UserEntity user=(UserEntity)httpSession.getAttribute("user");
+        if(user.getPassword().equals(userEntity.getPassword())){
+            return null;
+        }else{
+            return "请输入正确的账户密码！";
+        }
+    }
 }

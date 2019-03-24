@@ -27,12 +27,12 @@
 					</tr>
 					<tr>
 						<td><label for="password">密码:</label></td>
-						<td><input class="form-control" id="password" name="password" type="text" placeholder="输入密码"/></td>
+						<td><input class="form-control" id="password" name="password" type="password" placeholder="输入密码"/></td>
 						<td></td>
 					</tr>
 					<tr>
 						<td><label for="okpwd">确认密码:</label></td>
-						<td><input class="form-control" id="okpwd" name="okpwd" type="text" placeholder="确认密码" /></td>
+						<td><input class="form-control" id="okpwd" name="okpwd" type="password" placeholder="确认密码" /></td>
 						<td><span id="result2"></span></td>
 					</tr>
 					<tr>

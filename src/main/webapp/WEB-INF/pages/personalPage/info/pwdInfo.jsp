@@ -8,6 +8,7 @@
 <link href="/css/person-page.css" rel="stylesheet"/>
 <script src="/js/height.js"></script>
 <script src="/js/basic-info.js"></script>
+<script src="/js/pwdInfo.js"></script>
 <title>${user.username}的个人主页-信息完善</title>
 </head>
 <body>
@@ -31,22 +32,25 @@
 					</div>
 					<div class="info-form">
 						<div class="info-form-title"><h5>密码修改</h5></div>
-						<form action="" method="post" class="settings-form">
+						<form action="" method="post" class="settings-form" onsubmit="return checkAll()">
 							<table>
 								<tr>
 									<th>旧密码:</th>
-									<td><input type="text" class="form-control" name="pastPassword" placeholder="输入旧密码" style="font-size: 13px;"/></td>
+									<td><input type="password" id="pastPassword" class="form-control" name="pastPassword" placeholder="输入旧密码" style="font-size: 13px;"/></td>
+                                    <td><span id="alert1"></span></td>
 								</tr>
 								<tr>
 									<th>新密码:</th>
-									<td><input type="text" class="form-control" name="password" placeholder="输入新密码" style="font-size: 13px;"/></td>
+									<td><input type="password" id="password" class="form-control" name="password" placeholder="输入新密码" style="font-size: 13px;"/></td>
+                                    <td><span id="alert2"></span></td>
 								</tr>
 								<tr>
 									<th>确认密码:</th>
-									<td><input type="text" class="form-control" name="okPassword" placeholder="确定新密码" style="font-size: 13px;"/></td>
+									<td><input type="password" id="okPassword" class="form-control" name="okPassword" placeholder="确定新密码" style="font-size: 13px;"/></td>
+                                    <td><span id="alert3"></span></td>
 								</tr>
 							</table>
-							<input type="submit" value="保存" class="btn btn-primary submit" style="font-size:13px;"/>
+							<input id="add" type="submit" value="保存" class="btn btn-primary submit" style="font-size:13px;"/>
 						</form>
 					</div>
 				</div>
